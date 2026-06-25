@@ -3,26 +3,98 @@
 	<div class="container-wide">
 		<div class="site-branding">
 			<a href="{{ "/" | relative_url }}">
-        <img src="{{ '/assets/img/Logo.svg' | relative_url }}" alt="All In logo" />
-        <span class="sr-only">Return to homepage</span>
+				<img src="{{ '/assets/img/Logo.svg' | relative_url }}" alt="All In logo" />
+        			<span class="sr-only">Return to homepage</span>
 			</a>
 		</div>
 
 		<ul class="desktop-navigation">
-			<li{% if page.id == 'home' %} class="is-active"{% endif %}>
-				<a href="/">
-					<span>Overview</span>
-				</a>
-			</li>
-			<li{% if page.id == 'access' %} class="is-active"{% endif %}>
-				<a href="/access/">
+		
+			<li class="has-sub-nav {% if page.id == 'access' or page.id == 'africa' %} is-parent{% endif %}">
+				<a href="{{ '/access/' | relative_url }}">
 					<span>Access</span>
 				</a>
+
+				<ul class="sub-nav sub-nav--sm">
+					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
+						<a href="{{ '/access/' | relative_url }}">
+							<span>Overview</span>
+						</a>
+					</li>
+					<li class="bold-link">
+						<a href="{{ '/access/' | relative_url }}">
+							<span>Programs</span>
+						</a>
+					</li>
+					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
+						<a href="{{ '/access/students/' | relative_url }}">
+							<span>Students</span>
+						</a>
+					</li>
+					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
+						<a href="{{ '/access/africa/' | relative_url }}">
+							<span>Africa</span>
+						</a>
+					</li>
+				</ul>
 			</li>
-			<li{% if page.id == 'community' %} class="is-active"{% endif %}>
-				<a href="/community/">
-					<span>Community</span>
+					
+			<li class="has-sub-nav {% if page.id == 'maintainers' or page.id == 'resources' or page.id == 'faq' or page.id == 'listening-tour' %} is-parent{% endif %}">
+				<a href="{{ '/maintainers/' | relative_url }}">
+					<span>Maintainers</span>
 				</a>
+
+				<ul class="sub-nav">
+					<li{% if page.id == 'maintainers' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/' | relative_url }}">
+							<span>Overview</span>
+						</a>
+					</li>
+					<li{% if page.id == 'listening-tour' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/maintainers-listening-tour/' | relative_url }}">
+							<span>Maintainers Listening Tour</span>
+						</a>
+					</li>
+					<li{% if page.id == 'faq' %} class="is-active"{% endif %}>
+						<a href="{{ '/faq/' | relative_url }}">
+							<span>FAQs</span>
+						</a>
+					</li>
+
+					<li class="bold-link">
+						<a href="{{ '/maintainers/#programs' | relative_url }}">
+							<span>Programs</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'resources' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/DEI-resources/' | relative_url }}">
+							<span>DEI Resource Hub</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'badging' %} class="is-active"{% endif %}>
+						<a href="https://badging.chaoss.community">
+							<span>DEI Badging Program</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'community' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/community-collaboration/' | relative_url }}">
+							<span>Community Collaboration Hub</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'creators' %} class="is-active"{% endif %}>
+						<span>
+							<span>DEI Content Creators</span>
+							<img src="{{ '/assets/img/direction/programs/coming-soon.svg' | relative_url }}" alt="Coming soon" />
+						</span>
+					</li>
+
+
+
+				</ul>
 			</li>
 
 			<li{% if page.id == 'equity' %} class="is-active"{% endif %}>
@@ -36,15 +108,18 @@
 					<span>Data</span>
 				</a>
 			</li>
+
 		</ul>
 
 		<div class="site-header__utility">
+		
 			<a class="btn-alt" href="/become-a-partner/">
 				<div>
 					<span>Join the Community</span>
 					{% include arrow.html %}
 				</div>
 			</a>
+		
 			<div class="burger js-menu-trigger">
 				<svg class="closed" width="24" height="24" viewBox="0 0 24 24">
 					<path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z" fill="#06F395"/>
@@ -59,19 +134,54 @@
 		<nav class="navigation-drawer">
 			<div>
 				<ul class="mobile-navigation">
-					<li{% if page.id == 'home' %} class="is-active"{% endif %}>
-						<a href="/">
-							<span>Overview</span>
-						</a>
-					</li>
 					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
 						<a href="/access/">
 							<span>Access</span>
 						</a>
 					</li>
+					<li{% if page.id == 'students' %} class="is-active"{% endif %}>
+						<a href="/access/students/">
+							<span>All in for Students</span>
+						</a>
+					</li>
+					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
+						<a href="/access/africa/">
+							<span>All in Africa</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'maintainers' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/' | relative_url }}">
+							<span>Maintainers</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'listening-tour' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/maintainers-listening-tour/' | relative_url }}">
+							<span>Maintainers Listening Tour</span>
+						</a>
+					</li>
+					<li{% if page.id == 'faq' %} class="is-active"{% endif %}>
+						<a href="{{ '/faq/' | relative_url }}">
+							<span>FAQs</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'resources' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/DEI-resources/' | relative_url }}">
+							<span>DEI Resource Hub</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'badging' %} class="is-active"{% endif %}>
+						<a href="https://badging.chaoss.community">
+							<span>DEI Badging Program</span>
+						</a>
+					</li>
+
 					<li{% if page.id == 'community' %} class="is-active"{% endif %}>
-						<a href="/community/">
-							<span>Community</span>
+						<a href="{{ '/maintainers/community-collaboration/' | relative_url }}">
+							<span>Community Collaboration Hub</span>
 						</a>
 					</li>
 
@@ -86,13 +196,19 @@
 							<span>Data</span>
 						</a>
 					</li>
+
 				</ul>
 
 				<div>
-					<a class="btn" href="/become-a-partner/">
-	          <span>Join the Community</span>
-	          {% include arrow.html %}
-	        </a>
+		
+			
+			<a class="btn" href="/become-a-partner/">
+				
+					<span>Join the Community</span>
+					{% include arrow.html %}
+				
+			</a>
+			
 				</div>
 			</div>
 		</nav>

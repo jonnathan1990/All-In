@@ -1,0 +1,28 @@
+- title: Internship Opportunities*
+  image: opportunities.svg
+  description: Apply for exclusive internship opportunities with companies such as GitHub, Microsoft, Red Hat, Fidelity, Cisco,  Intel, and many more companies, startups, nonprofits, and open source communities as our list of partners and the opportunities available to you expands.
+
+- title: Education
+  image: education.svg
+  description: Advance your technical skills with free access to open source courses and training curriculum.
+
+- title: Technical Training
+  image: training.svg
+  description: Gain hands-on experience through virtual and in-person hackathons.
+
+- title: Career Development
+  image: careers.svg
+  description: Receive individual resume reviews, mock interviews, and more! Learn about team communication, how to leverage employee resource groups, and other key development topics.
+
+- title: Swag
+  image: swag.svg
+  description: Proudly wear your All In or partner-branded hoodies, socks, shirts, backpacks, and other swag you’ll receive by participating.
+
+
+- title: Scholarships
+  image: scholarships.svg
+  description: Access opportunities to apply for funding to attend bootcamps, conferences and participate in fellowships throughout the year.
+
+- title: Mentoring & Networking
+  image: networking.svg
+  description: Meet with software developers, engineers, and other tech professionals and network with students from other schools throughout the U.S.

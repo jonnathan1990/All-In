@@ -50,7 +50,7 @@
   display: block;
   font-family: $serif;
   font-weight: 700;
-  font-size: 36px !important;
+  font-size: 32px !important;
   line-height: 125%;
   letter-spacing: 0;
   margin-bottom: 16px;
@@ -61,6 +61,18 @@
 
   @include start-at($large) {
     font-size: 40px !important;
+
+    &.h3-lg {
+      font-size: 48px !important;
+    }
+  }
+}
+
+.h3--alt {
+  font-size: 28px !important;
+
+  @include start-at($large) {
+    font-size: 32px !important;
   }
 }
 
@@ -69,7 +81,7 @@
   display: block;
   font-family: $serif;
   font-weight: 700;
-  font-size: 24px !important;
+  font-size: 20px !important;
   line-height: 125%;
   letter-spacing: 0;
   margin-bottom: 16px;
@@ -311,4 +323,38 @@ small {
       z-index: -2;
     }
   }
+}
+
+
+blockquote {
+  position: relative;
+  z-index: 1;
+
+  > img {
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    z-index: -1;
+    width: 64px;
+  }
+
+  .h3 {
+    @include start-at($large) {
+      font-size: 32px !important;
+    }
+  }
+}
+
+
+.rte ul a {
+  text-decoration: underline;
+  transition: opacity $trans;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.text-white p a {
+  color: $white;
 }
